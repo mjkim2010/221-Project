@@ -24,6 +24,7 @@ le.classes_
 #print le.inverse_transform(Y)
 #Fitting the model
 
+#implement Multinomial NB
 from sklearn.naive_bayes import MultinomialNB
 clf = MultinomialNB().fit(X,Y)
 
@@ -40,6 +41,7 @@ print pd.DataFrame(output.items())
 predicted = clf.predict(tfid_vectorizer.transform(test.symptoms))
 print le.classes_[predicted]
 
+#implement Binomial NB
 from sklearn.naive_bayes import BernoulliNB
 clf = BernoulliNB().fit(X,Y)
 
